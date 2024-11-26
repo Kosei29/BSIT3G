@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Workbench</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img class="profile" src="imgs/1X1_PIC.png">
+            <div class="profile">
+                <p>Jhonrylle Jay T. Burlaos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="hobbies.html"><i class="fa-solid fa-book"></i> Hobbies</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-feather-pointed"></i> Resume</a></li>
+                    <li><a href="biography.html"><i class="fa-solid fa-user"></i> Biography</a></li>
+                    <li><a href="test.html"><i class="fa-solid fa-gear"></i> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="justify-content">
+            <section class="content">
+                <div id="typing-container" class="typing-container"></div><br>
+
+                <div class="image-panel">
+                    <div class="image-container">
+                        <img src="imgs/Albionimg.jpg" alt="Albion">
+                        <video src="videos/5 secs albion.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/Loloflegends.jpg" alt="LoL">
+                        <video src="videos/LOLPreview.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/minecraftimg.jpg" alt="Minecraft">
+                        <video src="videos/MinecraftPreview.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/terrariaimg.jpg" alt="Terraria">
+                        <video src="videos/TerrariaPreview.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/duellinksimg.jpg" alt="Duel Links">
+                        <video src="videos/DuelLinksPreview.mp4" muted autoplay loop></video>
+                    </div>
+                </div>
+                <br>
+                <div id="typing-container1" class="typing-container1"></div><br>
+            </section>
+            </div>
+            <div class="image-panel">
+                    <img src="imgs/fairytailimg.jpg" alt="Albion">
+                    <img src="imgs/TWGOKimg.jpg" alt="LoL">
+                    <img src="imgs/digimonxrosimg.jpg" alt="Minecraft">
+                    <img src="imgs/yugiohgzimg.jpg" alt="Terraria">
+                    <img src="imgs/YLIAimg.png" alt="Duel Links">
+            </div>
+            <div class="hometype" id="hometype"></div>
+            <h1>This was supposed to be a srollable div</h1>
+            <div class="scrollable-div">
+            <p>I didn't use this cause it's kinda complicated what I wanted to achieve. :P </p>
+            <br>
+            <p>I'll just put anything here, my nickname came from the anime Your Lie in April where as the main character kousei is the insiration. </p>
+            <br>
+            <p>Fun fact: the exoskeleton of the insects are far more durable than the bones of any human body, given they have the same mass and or weight.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const text = "This is where I test my codes before putting it inside the main content!";
+        const typingContainer = document.getElementById("typing-container");
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                typingContainer.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 30);
+            } else {
+                typingContainer.style.borderRight = "none";
+            }
+        }
+        typeEffect();
+
+        const textArray = [
+            "Welcome to my portfolio!",
+            "I love creating websites.",
+            "Let's build something amazing together!"
+        ];
+
+        const hometype = document.getElementById("hometype");
+        let arrayIndex = 0; // Track the current string in the array
+        let charIndex = 0;  // Track the current character in the string
+
+        function typeEffect1() {
+            if (arrayIndex < textArray.length) {
+                const currentText = textArray[arrayIndex];
+                if (charIndex < currentText.length) {
+                    hometype.textContent += currentText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeEffect1, 50); // Adjust speed here
+                } else {
+                    setTimeout(() => {
+                        hometype.textContent = ""; // Clear text
+                        charIndex = 0;
+                        arrayIndex++;
+                        typeEffect1(); // Start the next string
+                    }, 1500); // Pause before next string
+                }
+            }
+        }
+
+        typeEffect1();
+    </script>
+</body>
+</html>

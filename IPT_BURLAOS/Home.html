@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Workbench</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="imgs/1X1_PIC.png">
+            <div class="profile">
+                <p>Jhonrylle Jay T. Burlaos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="hobbies.html"><i class="fa-solid fa-book"></i> Hobbies</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-feather-pointed"></i> Resume</a></li>
+                    <li><a href="biography.html"><i class="fa-solid fa-user"></i> Biography</a></li>
+                    <li><a href="test.html"><i class="fa-solid fa-gear"></i> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="content">
+                <div id="typing-container" class="typing-container"></div>
+                    
+            </section>
+            <br>
+            <section class="content">
+                <div id="typing-container1" class="typing-container"></div>
+
+
+            </section>
+            <br>
+            <section class="content">
+                <div id="typing-container2" class="typing-container"></div>
+
+
+            </section>
+            <br>
+            <section class="content">
+                <div id="typing-container3" class="typing-container"></div>
+
+
+            </section>
+        </main>
+        <script>
+            const text = "Hi! My name is Jhonrylle Jay T. Burlaos, but some of you might know me by the name Kosei. I am an aspiring IT student aiming to achieve to be a web developer, and a game developer.";
+            const typingContainer = document.getElementById("typing-container");
+                let index = 0;
+
+                    function typeEffect() {
+                        if (index < text.length) {
+                            typingContainer.textContent += text.charAt(index);
+                            index++;
+                            setTimeout(typeEffect, 10);
+                            } else {
+                                typingContainer.style.borderRight = "none";
+                                    }
+                                    }
+                                    typeEffect();
+            const text2 = "But first a little background story about me. I am 22 turning 23 this coming December, I am studying BSIT at City of Malabon University.I love the color Purple a lot, I love nerdy stuff (most of the time I study random things cause why not? and it keeps me facinated about what life could bring).";
+            const typingContainer1 = document.getElementById("typing-container1");
+                let index1 = 0;
+
+                    function typeEffect2() {
+                        if (index1 < text2.length) {
+                            typingContainer1.textContent += text2.charAt(index1);
+                            index1++;
+                            setTimeout(typeEffect2, 10);
+                            } else {
+                                typingContainer1.style.borderRight = "none";
+                                    }
+                                    }
+                                    typeEffect2();
+            const text3 = "Here I will end my introduction of myself by providing you one of the best quotes I know 'If a person is quiet it is not because he is just quiet, sometimes they pretend to be one to obseverve their surrounding.' - anonymous person";
+            const typingContainer2 = document.getElementById("typing-container2");
+                let index2 = 0;
+
+                    function typeEffect3() {
+                        if (index2 < text3.length) {
+                            typingContainer2.textContent += text3.charAt(index2);
+                            index2++;
+                            setTimeout(typeEffect3, 10);
+                            } else {
+                                typingContainer2.style.borderRight = "none";
+                                    }
+                                    }
+                                    typeEffect3();
+            const text4 = "If you want to know more about me just click the buttons on the left panel to see what holds.";
+            const typingContainer3 = document.getElementById("typing-container3");
+                let index3 = 0;
+
+                    function typeEffect4() {
+                        if (index3 < text4.length) {
+                            typingContainer3.textContent += text4.charAt(index3);
+                            index3++;
+                            setTimeout(typeEffect4, 10);
+                            } else {
+                                typingContainer3.style.borderRight = "none";
+                                    }
+                                    }
+                                    typeEffect4();
+        </script>
+    </div>
+</body>
+</html>
