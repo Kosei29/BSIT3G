@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Workbench</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="javascript" href="js/javascript.js">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="imgs/1X1_PIC.png">
+            <div class="profile">
+                <p>Jhonrylle Jay T. Burlaos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="hobbies.html"><i class="fa-solid fa-book"></i> Hobbies</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-feather-pointed"></i> Resume</a></li>
+                    <li><a href="biography.html"><i class="fa-solid fa-user"></i> Biography</a></li>
+                    <li><a href="test.html"><i class="fa-solid fa-gear"></i> Test</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="justify-content">
+            <section class="content">
+                <div id="typing-container" class="typing-container"></div><br>
+                <div class="image-panel">
+                    <div class="image-container">
+                        <img src="imgs/Albionimg.jpg" alt="Albion">
+                        <video src="videos/5 secs albion.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/Loloflegends.jpg" alt="LoL">
+                        <video src="videos/loloflegendssvideo.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/minecraftimg.jpg" alt="Minecraft">
+                        <video src="videos/mcbeeedio.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/terrariaimg.jpg" alt="Terraria">
+                        <video src="videos/terrabeedio.mp4" muted autoplay loop></video>
+                    </div>
+                    <div class="image-container">
+                        <img src="imgs/duellinksimg.jpg" alt="Duel Links">
+                        <video src="videos/yugiohduelinksvideo.mp4" muted autoplay loop></video>
+                    </div>
+                </div>
+                    <br>
+            <div id="typing-container1" class="typing-container"></div><br>
+                <div class="image-panel">
+                        <img src="imgs/fairytailimg.jpg" alt="Fairy Tail" onclick="openModal(this)">
+                        <img src="imgs/TWGOKimg.jpg" alt="The World God Only Knows" onclick="openModal(this)">
+                        <img src="imgs/digimonxrosimg.jpg" alt="Digimon Xros Wars" onclick="openModal(this)">
+                        <img src="imgs/yugiohgzimg.jpg" alt="Yugioh GX" onclick="openModal(this)">
+                        <img src="imgs/YLIAimg.png" alt="Your Lie In April" onclick="openModal(this)">
+                </div>
+                <div id="modal" class="modal">
+                    <span class="modal-close" onclick="closeModal()">&times;</span>
+                    <img id="modal-image" src="" alt="Expanded View">
+                </div>
+                <br><div id="typing-container2" class="typing-container"></div><br>
+                <div class="image-panel">
+                        <img src="imgs/insectsimg.jpg" alt="Insect">
+                        <img src="imgs/chemistryimg.jpg" alt="Chemistry">
+                        <img src="imgs/lifeimg.jpg" alt="Life">
+                        <img src="imgs/lawimg.jpg" alt="Law">
+                        <img src="imgs/musicimg.jfif" alt="Music"> 
+                </div>
+                <div id="modal" class="modal">
+                    <span class="modal-close" onclick="closeModal()">&times;</span>
+                    <img id="modal-image" src="" alt="Expanded View">
+                </div>
+
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+
+        function openModal(image) {
+        modal.style.display = "flex";
+        modalImage.src = image.src;
+        }
+        function closeModal() {
+        modal.style.display = "none";
+        }
+        /*games*/
+        const text = "I play games and these are the top 5 games I play!";
+        const typingContainer = document.getElementById("typing-container");
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                typingContainer.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 30);
+            } else {
+                typingContainer.style.borderRight = "none";
+            }
+        }
+        typeEffect();
+        /*anime*/
+        const text2 = "I watch animes, here are some of them! And I recommend you to watch it if you haven't!";
+        const typingContainer1 = document.getElementById("typing-container1");
+        let index1 = 0;
+
+        function typeEffect2() {
+            if (index1 < text2.length) {
+                typingContainer1.textContent += text2.charAt(index1);
+                index1++;
+                setTimeout(typeEffect2, 30); 
+            } else {
+                typingContainer1.style.borderRight = "none";
+            }
+        }
+        typeEffect2();
+        /*Study*/
+        const text3 = "I study some random things related to the topic below!!";
+        const typingContainer2 = document.getElementById("typing-container2");
+        let index2 = 0;
+
+        function typeEffect3() {
+            if (index1 < text3.length) {
+                typingContainer2.textContent += text3.charAt(index2); 
+                index2++;
+                setTimeout(typeEffect3, 30);
+            } else {
+                typingContainer2.style.borderRight = "none";
+            }
+        }
+        typeEffect3();
+    </script>
+</body>
+</html>
